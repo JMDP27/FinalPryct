@@ -39,6 +39,25 @@ async def zorro(ctx):
     image_url = imagen_zorro()
     await ctx.send(image_url)
 
+@bot.command()
+async def beneficios(ctx):
+    listeco = (
+        "Producción de oxígeno: Los árboles absorben dióxido de carbono y producen oxígeno durante su proceso de respiracion, ayudando a purificar el aire.",
+        "Hábitat para la vida silvestre: Los árboles proporcionan refugio y alimento para diversas especies de animales, ayudando a mantener la biodiversidad.",
+        "Reducción de la contaminación: Los árboles absorben contaminantes del aire y del suelo, ayudando a mejorar la calidad del aire y del agua.",
+        "Control de la erosión del suelo: Las raíces de los árboles ayudan a prevenir la erosión del suelo, protegiendo así contra deslizamientos de tierra y pérdida de suelo fértil.",
+        "Sombra y enfriamiento: Los árboles proporcionan sombra en áreas urbanas, reduciendo la temperatura ambiente.",
+        "Embellecimiento del entorno: Los árboles añaden belleza y valor estético a los paisajes urbanos y rurales, mejorando la calidad de vida de las personas."
+        )
+    await ctx.send(random.choice(listeco))
+
+@bot.command()
+async def materiales(ctx):
+    await ctx.send("Árbol joven: Puedes adquirir un árbol joven en un vivero - Pala: Para cavar el hoyo donde plantarás el árbol. - Tierra y lugar donde plantar el arbol - Abono orgánico: Ayudará a enriquecer la tierra y a nutrir el árbol (completamente opcional). - Agua: Es esencial para el crecimiento inicial del árbol, especialmente durante los primeros meses. - Guantes de jardinería: Para proteger tus manos durante el proceso de plantación. - Estacas y cordeles: Si es necesario para sostener el árbol mientras se establece.")
+
+@bot.command()
+async def tutorial(ctx):
+    await ctx.send("1 Hacer un hueco de 30cm de profundidad y 20cm de ancho (al hacer el hueco, se divide la tierra sacada en dos, la parte mas cercana a la superficie [o mas fertil] se separa de parte mas profunda [o menos fertil]), luego, se coloca la tierra mas fertil en el fondo de agujero - 2) Se retira con mucho cuidado la planta o vivero del arbol de la bolsa y se coloca en el centro del agujero dejando un espacio minusculo entre el suelo y la raiz - 3) Se procede a recolocar el resto de la tierra [osease la mas profunda o infertil] hasta rellenar el hueco - 4) Se compacta la tierra con los pies o las manos sin dejarla muy compacta ni muy suelta - 5) Hacer una especie de crater [se le conoce como bordo o cajete] al rededor del arbol para mejorar la captacion de agua - 6) Hacer una estaca para ayudar al arbol a crecer completamente recto y atarlo a al arbol - 7) Y obviamente, regar el arbol cada 3 dias)")
 
 @bot.command()
 async def mem(ctx):
